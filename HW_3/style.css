@@ -1,0 +1,29 @@
+/* *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+} */
+
+.block {
+    width: 350px;
+    height: 220px;
+    padding: 15px 10px 20px 10px;
+    margin-bottom: 30px;
+    border: 2px dashed rgb(255, 60, 60);
+    background: rgb(122, 241, 53);
+    box-sizing: border-box;
+}
+
+.top-image {
+    float: left;
+    width: 200px;
+    margin: 0 15px 15px 0;
+}
+
+.bottom-image {
+    float: right;
+    width: 200px;
+    margin: 15px 0 15px 15px;
+}

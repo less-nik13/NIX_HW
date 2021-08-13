@@ -1,0 +1,149 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        min-height: 400px;
+        width: calc(90% / 3);
+        // max-width: 330px;
+        margin: 15px 0;
+        padding: 30px 30px 20px 30px;
+        border: 3px solid rgb(203, 147, 248);
+        border-radius: 20px;
+        text-align: center;
+        transition: transform 0.4s;
+
+        &:hover {
+            transform: translate(0, -15px);
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+    }
+
+    &__content {
+        flex: 1 0 auto;
+    }
+
+    &__image {
+        border-radius: 50%;
+    }
+
+    &__title {
+        margin-top: 20px;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+    }
+
+    &__image-wrapper::before {
+        content: " ";
+        display: inline-block;
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: rgb(203, 147, 248);
+        transform: translate(-10px, -10px);
+        z-index: -1;
+    }
+
+    &__button-wrapper {
+        margin-top: 15px;
+    }
+
+    &__button {
+        text-decoration: none;
+        background-color: rgb(185, 104, 252);
+        color: white;
+        cursor: pointer;
+        padding: 8px 20px;
+        border-radius: 150px;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: rgb(137, 53, 206);
+        }
+    }
+}
+
+article {
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .cards {
+        &__item {
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        margin: 70px auto 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    article {
+        text-align: center;
+
+        > p {
+            font-size: 14px;
+        }
+
+        > h1 {
+            font-size: 26px;
+        }
+    }
+
+    .cards {
+        &__item {
+            width: 45%;
+            min-height: 350px;
+        }
+
+        &__image {
+            width: 90px;
+            height: 90px;
+
+            &-wrapper::before {
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__subtitle {
+            > p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cards {
+        &__item {
+            width: 100%;
+            min-height: 300px;
+        }
+
+        &__image {
+            width: 80px;
+            height: 80px;
+
+            &-wrapper::before {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
